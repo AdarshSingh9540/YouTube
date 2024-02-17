@@ -3,7 +3,7 @@ import React from 'react'
 const VideosCards = ({info}) => {
     const {snippet ,statistics}= info;
     const {channelTitle , title , thumbnails} = snippet;
-    console.log(info);
+   
   return (
     <div className='m-2 p-2 w-72' >
     <img className='rounded-lg' src={thumbnails.high.url} alt="" />

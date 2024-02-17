@@ -21,7 +21,7 @@ const VideoCont = () => {
     <div className='flex flex-wrap'>
     {
       videos.map(video =>  (
-        <Link to={"/watch?v="+video.id}><VideosCards key={video.id} info={video}/></Link>
+        <Link key={video.id} to={"/watch?v="+video.id}><VideosCards  info={video}/></Link>
       ))
     }
    

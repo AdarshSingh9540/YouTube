@@ -1,8 +1,24 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { toggleMenu } from '../utilis/appSlice';
+import { Search_API } from '../utilis/constant';
 
 const Header = () => {
+
+  const [searchQuery ,setSearchQuery] = useState("");
+
+   useEffect(()=>{
+    const timer =setTimeout(()=>getSearchSugg(),200);
+    return () =>{
+      clearTimeout(timer);
+    }
+   },[searchQuery])
+
+   const getSearchSugg = async ()=>{
+    const data = await fetch(Search_API+searchQuery);
+    const json = await data.json();
+    console.log(json)
+   }
 
     const dispatch = useDispatch();
 
@@ -24,7 +40,11 @@ className='h-12 mx-2' src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt
  />
    </div>
       <div className='col-span-10 px-10'>
-        <input type="text" className='w-1/2 border border-gray-400 rounded-l-lg px-5 py-2'  placeholder='Search...'/>
+        <input 
+        value={searchQuery}
+        onChange={(e)=> setSearchQuery(e.target.value)}
+        type="text"
+         className='w-1/2 border border-gray-400 rounded-l-lg px-5 py-2'  placeholder='Search...'/>
         <button className='border border-gray-400 rounded-r-lg px-5 py-2'>Search</button>
       </div>
       <div className='col-span-1'>
