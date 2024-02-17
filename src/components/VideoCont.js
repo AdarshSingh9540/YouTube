@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { API_URL } from '../utilis/constant';
 import VideosCards from './VideosCards';
-
+import { Link } from 'react-router-dom';
 const VideoCont = () => {
 
   const [videos ,setVideos] = useState([]);
@@ -20,7 +20,9 @@ const VideoCont = () => {
   return (
     <div className='flex flex-wrap'>
     {
-      videos.map(video =>  <VideosCards key={video.id} info={video}/>)
+      videos.map(video =>  (
+        <Link to={"/watch?v="+video.id}><VideosCards key={video.id} info={video}/></Link>
+      ))
     }
    
     </div>
