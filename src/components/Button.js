@@ -4,7 +4,7 @@ const Button = ({name}) => {
   return (
     <div>
 
-        <button className='py-2 m-3 px-5 bg-gray-300 rounded-lg'>{name}</button>
+        <button className='py-3 m-3 px-6 bg-gray-300 rounded-lg font-semibold'>{name}</button>
     </div>
   )
 }

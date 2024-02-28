@@ -6,7 +6,7 @@ const Sidebar = () => {
     if(!isMenuOpen) return null;
   return (
     <div className='p-5 shadow-lg w-48 cursor-pointer'>
-    <ul className=''>
+    <ul className=' font-semibold'>
         <li><Link to="/">Home</Link></li>
         <li>Sports</li>
         <li>Videos</li>
@@ -14,16 +14,16 @@ const Sidebar = () => {
     </ul>
 
 
-    <h1 className='font-bold pt-5'>Subscription</h1>
-    <ul className=''>
+    <h1 className='font-bold pt-5 text-l'>Subscription</h1>
+    <ul className='my-2'>
         <li>Music</li>
         <li>Sports</li>
         <li>Music</li>
         <li>Gaming</li>
     </ul>
 
-    <h1 className='font-bold pt-5'>Watch Later</h1>
-    <ul className=''>
+    <h1 className='font-bold pt-5 text-l'>Watch Later</h1>
+    <ul className='my-2 text-l'>
         <li>Music</li>
         <li>Sports</li>
         <li>Music</li>
