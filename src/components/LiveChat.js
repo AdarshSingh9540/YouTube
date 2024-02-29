@@ -34,7 +34,7 @@ const LiveChat = () => {
       }
       
     </div>
-    <form className='w-full p-2 m-2 border border-black ' onSubmit={(e) =>{
+    <form className='w-full p-2 m-4 border border-black ' onSubmit={(e) =>{
       e.preventDefault();
       dispatch(addMessage({
         name:"Adarsh Singh",
@@ -42,10 +42,10 @@ const LiveChat = () => {
       }));
       setLiveMess(" ")
     }}>
-      <input type="text" className='w-96 p-3' value={liveMess} onChange={(e) =>{
+      <input type="text" className='w-96 p-3 border border-black rounded-md' value={liveMess} onChange={(e) =>{
         setLiveMess(e.target.value)
       }} />
-      <button className='px-2 mx-2 bg-green-200 '>Send</button>
+      <button className='px-5 p-3 mx-2 bg-red-500 font-bold rounded-md'>Send</button>
 
     </form>
     </>
