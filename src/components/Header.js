@@ -45,16 +45,16 @@ const Header = () => {
         dispatch(toggleMenu());
     };
   return (
-    <div className='grid grid-flow-col p-5 m-2 shadow-lg sticky top-0 z-10 h-20 bg-white' >
+    <div className='grid grid-flow-col p-1 md:p-5 m-1 md:m-2 shadow-lg sticky top-0 z-10 h-20 bg-white' >
    <div className='flex col-span-1'>
    <img 
    onClick={()=>toggleMenuhandler()}
-   className='h-11 cursor-pointer'
+   className='h-9 md:h-11 mt-6 md:mt-0 ml-1 md:ml-0cursor-pointer'
     src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png?f=webp"  
     alt="hamburger"
     />
 <img 
-className='h-12 mx-2 ' src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt=""
+className='h-12 m-6 md:m-0 ml-6 md:ml-6  mt-5 md:mt-0 md:mx-2 ' src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt=""
  />
    </div>
       <div className='col-span-10 px-10 mx-25'>
@@ -65,8 +65,8 @@ className='h-12 mx-2 ' src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qR
         onFocus={()=> setShowSugg(true)}
         onBlur={()=> setShowSugg(false)}
         type="text"
-         className='w-1/2 border border-gray-400 rounded-l-lg px-5 py-2'  placeholder='Search...'/>
-        <button className='border border-gray-400 rounded-r-lg px-5 py-2'>Search</button>
+         className='w-[50%] md:w-1/2 border border-gray-400 rounded-l-lg px-2 md:px-5 py-1 md:py-2 mt-6 md:mt-0 ml-16 md:ml-0'  placeholder='Search...'/>
+        <button className='border border-gray-400 rounded-r-lg px-1 md:px-5 py-1 md:py-2'>Search</button>
         </div>
         {/* <div className='fixed bg-white py-2 px-5 w-[37rem] shadow-lg rounded-lg'>
           <ul className=''>
@@ -80,7 +80,7 @@ className='h-12 mx-2 ' src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qR
           </ul>
         </div> */}
       </div>
-      <div className='col-span-1'>
+      <div className='col-span-1 hidden md:block mt-4 md:mt-0 mr-6 md:mr-0'>
         <img className='h-8' src="https://t3.ftcdn.net/jpg/05/53/79/60/360_F_553796090_XHrE6R9jwmBJUMo9HKl41hyHJ5gqt9oz.jpg" alt="" />
       </div>
     </div>

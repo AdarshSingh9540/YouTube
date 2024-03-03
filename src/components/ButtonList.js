@@ -1,11 +1,11 @@
 import React from 'react'
 import Button from './Button'
 
-const list = ["All","Cricket","Gaming","Songs","Movies","News","Cartoon","Cooking","Live ","Highlights","Special","Beats","Colleges","Trains","Watched"];
+const list = ["All","Cricket","Gaming","Songs","Movies","News","Cartoon","Cooking","Live ","Highlights","Special","Beats","Colleges","Trains"];
 
 const ButtonList = () => {
   return (
-    <div className='flex'>
+    <div className='w-full flex  w-full overflow-x-auto whitespace-nowrap' >
       {list.map((item, index) => (
         <Button key={index} name={item} />
       ))}
