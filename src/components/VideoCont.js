@@ -18,7 +18,7 @@ const VideoCont = () => {
     setVideos(json.items);
   }
   return (videos.length === 0) ? <ShimmerVideoCardContainer/> : (
-    <div className='flex flex-wrap'>
+    <div className='p-2 flex flex-wrap'>
     {
       videos.map(video =>  (
         <Link key={video.id} to={"/watch?v="+video.id}><VideosCards  info={video}/></Link>

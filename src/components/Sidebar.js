@@ -5,7 +5,7 @@ const Sidebar = () => {
     const isMenuOpen = useSelector((store) =>store.app.isMenuOpen);
     if(!isMenuOpen) return null;
   return (
-    <div className='p-5 shadow-lg  cursor-pointer  h-screen sticky top-20 '>
+    <div className='p-5 shadow-lg  cursor-pointer  h-screen sticky top-20    text-md '>
     <ul className=' font-semibold p-4 text-xl ' >
     <li className="flex">
           <svg
