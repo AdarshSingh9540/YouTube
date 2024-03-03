@@ -65,7 +65,7 @@ className='h-12 m-6 md:m-0 ml-6 md:ml-6  mt-5 md:mt-0 md:mx-2 ' src="https://cdn
         onFocus={()=> setShowSugg(true)}
         onBlur={()=> setShowSugg(false)}
         type="text"
-         className='w-[50%] md:w-1/2 border border-gray-400 rounded-l-lg px-2 md:px-5 py-1 md:py-2 mt-6 md:mt-0 ml-16 md:ml-0'  placeholder='Search...'/>
+         className='w-[50%] md:w-1/2 border border-gray-400 rounded-l-lg px-2 md:px-5 py-1 md:py-2 mt-6 md:mt-0 ml-12 md:ml-0'  placeholder='Search...'/>
         <button className='border border-gray-400 rounded-r-lg px-1 md:px-5 py-1 md:py-2'>Search</button>
         </div>
         {/* <div className='fixed bg-white py-2 px-5 w-[37rem] shadow-lg rounded-lg'>
