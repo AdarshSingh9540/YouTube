@@ -5,7 +5,7 @@ import VideoCont from './VideoCont'
 const MainCont = () => {
   return (
     <div className='col-span-1'>
-        {/* <ButtonList/> */}
+        <ButtonList/>
         <VideoCont/>
     </div>
   )
