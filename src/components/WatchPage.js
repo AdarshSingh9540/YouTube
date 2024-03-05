@@ -18,6 +18,8 @@ const WatchPage = () => {
     fetchVideoInfo();
   }, [dispatch]);
 
+ 
+
   const fetchVideoInfo = async () => {
     try {
       const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${searchParams.get("v")}&key=${API_KEY}`);
@@ -30,14 +32,14 @@ const WatchPage = () => {
     }
   };
 
-  // Function to separate the description into different sections
+ 
   const separateDescription = (description) => {
-    // Regex patterns to match email and URL links
+  
     const emailPattern = /([\w.-]+@[^\s]+)/g;
     const urlPattern = /(https?:\/\/[^\s]+)/g;
     const socialMediaPattern = /(https?:\/\/(?:www\.)?(?:instagram|facebook|youtube)\.[^\s]+)/g;
 
-    // Split the description based on email, URL, and social media patterns
+  
     const emailSections = description.split(emailPattern).map((section, index) => {
       if (index % 2 === 0) return section;
       return <a href={`mailto:${section}`} key={section + index}>{section}</a>;
@@ -61,7 +63,7 @@ const WatchPage = () => {
       return section;
     });
 
-    // Flatten the array and filter out empty strings
+  
     const sections = socialMediaSections.flat().filter(section => section !== '');
 
     return sections;
@@ -84,10 +86,19 @@ const WatchPage = () => {
             {videoInfo && <h2 className='font-bold text-2xl mt-6 mb-2'>{videoInfo.title}</h2>}
             
       </div>
+      <div className="flex items-center mt-4 ">
+      <img  className="rounded-[50%] w-24 border-radius-[50%] mr-4" src="adarsh_profile.jpeg" alt="image" />
+      <div className='flex-1 line-height-[18px]'>
+        <p className=''>adarsh singh</p>
+        <span>1 M</span>
+      </div>
+      <div></div>
+      <button className='bg-red-600 '>Subscriber</button>
+      </div>
       <div className='bg-stone-100 shadow-xl p-4'>
       <div className='my-4 '>
               <button className='text-lg' onClick={() => setShowDescription(!showDescription)}>
-                <div className='text-xl font-semibold'> {showDescription ? 'Show Less ▲' : 'Show More ▼'}</div>
+                <div className='text-xl font-semibold'> {showDescription ? 'Description  ▲' : 'Description  ▼'}</div>
               </button>
             </div>
             {showDescription && (

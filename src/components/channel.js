@@ -12,7 +12,7 @@ const Channel = ({ videoId }) => {
     const getDetail = async () => {
         const data = await fetch("https://youtube.googleapis.com/youtube/v3/channels?part=snippet%2CcontentDetails%2Cstatistics&id="+videoId+"&key="+API_KEY)
         const json = await data.json();
-        console.log(json);
+        // console.log(json);
     }
 
     return (
