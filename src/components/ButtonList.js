@@ -5,7 +5,7 @@ const list = ["All","Cricket","Gaming","Songs","Movies","News","Cartoon","Cookin
 
 const ButtonList = () => {
   return (
-    <div className='w-full flex  w-full overflow-x-auto whitespace-nowrap' >
+    <div className='w-full flex overflow-x-auto whitespace-nowrap' >
       {list.map((item, index) => (
         <Button key={index} name={item} />
       ))}

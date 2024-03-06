@@ -5,8 +5,8 @@ const Sidebar = () => {
     const isMenuOpen = useSelector((store) =>store.app.isMenuOpen);
     if(!isMenuOpen) return null;
   return (
-    <div className='p-5 shadow-lg  cursor-pointer  h-screen sticky top-20    text-md '>
-    <ul className=' font-semibold p-4 text-xl ' >
+    <div className='p-2 shadow-lg  cursor-pointer  h-screen sticky top-20    text-md '>
+    <ul className=' font-semibold p-2 text-lg ' >
     <li className="flex">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -67,8 +67,8 @@ const Sidebar = () => {
     </ul>
 
 
-    <h1 className='font-bold pt-5 pl-2  text-xl'>Subscription</h1>
-    <ul className='my-2 pl-4 w-46 text-xl'> 
+    <h1 className='font-bold pt-5 pl-2  text-lg'>Subscription</h1>
+    <ul className='my-2 pl-2 w-46 text-lg'> 
     <li className="flex mt-4 cursor-pointer">
           <svg
             width="24"
@@ -202,8 +202,8 @@ const Sidebar = () => {
         </li>
     </ul>
 
-    <h1 className='font-bold pt-5 text-l pl-1 text-xl'>Watch Later</h1>
-    <ul className='my-2 text-l ml-4 text-xl'>
+    <h1 className='font-bold pt-5 text-l pl-1 text-lg'>Watch Later</h1>
+    <ul className='my-2 text-l ml-2 text-lg'>
     <li className="flex mt-4 cursor-pointer">
           <svg
             width="24"

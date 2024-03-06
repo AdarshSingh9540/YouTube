@@ -26,7 +26,7 @@ const LiveChat = () => {
     },[])
   return (
     <>
-      <div className='w-full h-[600px] ml-2 p-2 border border-black bg-slate-100 rounded-lg  overflow-y-scroll flex flex-col-reverse'>
+      <div className='w-[85%] h-[500px] ml-2 p-2 border border-black bg-slate-100 rounded-lg  overflow-y-scroll  flex flex-col-reverse'>
       {
         chatMessages.map((c,i)=> (
             <ChatsMess key={i} name={c.name} message={c.message}/>
@@ -34,7 +34,7 @@ const LiveChat = () => {
       }
       
     </div>
-    <form className='w-full p-2 m-4 border border-black ' onSubmit={(e) =>{
+    <form className='w-[80%] p-1 m-3 border border-black ' onSubmit={(e) =>{
       e.preventDefault();
       dispatch(addMessage({
         name:"Adarsh Singh",
@@ -42,10 +42,10 @@ const LiveChat = () => {
       }));
       setLiveMess(" ")
     }}>
-      <input type="text" className='w-96 p-3 border border-black rounded-md' value={liveMess} onChange={(e) =>{
+      <input type="text" className='w-60 p-1 border border-black rounded-md' value={liveMess} onChange={(e) =>{
         setLiveMess(e.target.value)
       }} />
-      <button className='px-5 p-3 mx-2 bg-red-500 font-bold rounded-md'>Send</button>
+      <button className='px-2 p-1 mx-2 bg-red-500 font-bold rounded-md'>Send</button>
 
     </form>
     </>

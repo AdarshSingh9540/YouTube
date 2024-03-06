@@ -4,14 +4,21 @@ import { closeMenu } from '../utilis/appSlice';
 import { useSearchParams } from 'react-router-dom';
 import Comments from './Comments';
 import LiveChat from './LiveChat';
-
-import { API_KEY } from '../utilis/constant';
-
+import { useSelector } from 'react-redux';
+import { API_KEY, ViewConverter } from '../utilis/constant';
+import { useLocation } from 'react-router-dom';
 const WatchPage = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  // const [searchParams, setSearchParams] = useSearchParams();
   const dispatch = useDispatch();
   const [videoInfo, setVideoInfo] = useState(null);
   const [showDescription, setShowDescription] = useState(false);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const videoId = searchParams.get('v');
+
+  console.log(videoId)
+  const channel = useSelector(state => state?.video?.channel?.find(channel => channel.id));
+  console.log(channel)
 
   useEffect(() => {
     dispatch(closeMenu());
@@ -25,7 +32,7 @@ const WatchPage = () => {
       const response = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet&id=${searchParams.get("v")}&key=${API_KEY}`);
       const data = await response.json();
       if (data.items && data.items.length > 0) {
-        setVideoInfo(data.items[0].snippet);
+        setVideoInfo(data?.items[0]?.snippet);
       }
     } catch (error) {
       console.error('Error fetching video information:', error);
@@ -70,39 +77,44 @@ const WatchPage = () => {
   };
 
   return (
-    <div className='flex flex-col w-full'>
+    <div className='flex flex-col w-full overflow-hidden'>
       <div className='px-5 flex w-full rounded-lg'>
-        <div className='w-[1400px] h-auto'>
+        <div className='w-[1100px] h-auto '>
           <iframe
-            width="1400"
-            height="700"
+            width="1085"
+            height="550"
             src={"https://www.youtube.com/embed/" + searchParams.get("v")}
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowFullScreen
           ></iframe>
-          <div className='w-[1200px] h-auto'>
-            {videoInfo && <h2 className='font-bold text-2xl mt-6 mb-2'>{videoInfo.title}</h2>}
+          <div className='w-[1100px] h-auto'>
+            {videoInfo && <h2 className='font-bold text-2xl mt-6 mb-2'>{videoInfo?.title}</h2>}
             
       </div>
-      <div className="flex items-center mt-4 ">
-      <img  className="rounded-[50%] w-24 border-radius-[50%] mr-4" src="adarsh_profile.jpeg" alt="image" />
-      <div className='flex-1 line-height-[18px]'>
-        <p className=''>adarsh singh</p>
-        <span>1 M</span>
+      <div className='flex m-5  ml-6 mt-4'>
+  <img className="rounded-full w-14 border-2 border-white mr-4" src={channel?.snippet?.thumbnails?.high?.url} alt="Channel Thumbnail" />
+  <div className=''>
+    <div className='flex items-center '>
+      <div className='flex-1'>
+        <p className='text-lg font-semibold'>{channel?.snippet?.title}</p>
+        <span className='text-lg'>{ViewConverter(channel?.statistics?.subscriberCount)}</span>
       </div>
-      <div></div>
-      <button className='bg-red-600 '>Subscriber</button>
-      </div>
-      <div className='bg-stone-100 shadow-xl p-4'>
-      <div className='my-4 '>
+      <button className='bg-red-600 px-2 py-1 text-white rounded-md font-semibold ml-20'>Subscribe</button>
+    </div>
+  </div>
+</div>
+
+
+      <div className='bg-stone-100 shadow-xl p-2'>
+      <div className='my-2 '>
               <button className='text-lg' onClick={() => setShowDescription(!showDescription)}>
-                <div className='text-xl font-semibold'> {showDescription ? 'Description  ▲' : 'Description  ▼'}</div>
+                <div className='text-lg font-semibold'> {showDescription ? 'Description  ▲' : 'Description  ▼'}</div>
               </button>
             </div>
             {showDescription && (
-              <div className='text-lg'>
+              <div className='text-md'>
                 {videoInfo && separateDescription(videoInfo.description).map((section, index) => (
                   <p key={index}>{section}</p>
                 ))}

@@ -5,7 +5,9 @@ import VideoCont from './VideoCont'
 const MainCont = () => {
   return (
     <div className='col-span-1'>
-        <ButtonList/>
+         <div className='w-full overflow-x-auto'>
+        <ButtonList />
+      </div>
         <VideoCont/>
     </div>
   )
