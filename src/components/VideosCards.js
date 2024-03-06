@@ -30,11 +30,11 @@ const VideosCards = ({ info, channelId }) => {
             <img className='rounded-lg mt-1' src={info.snippet.thumbnails.high.url} alt="" />
             <div className='flex flex-row'>
                 {channel && (
-                    <img className='w-12 md:w-12 h-12 mt-6 mr-1 rounded-[50%]' src={channel.snippet.thumbnails.high.url} alt="" />
+                    <img className='w-12 h-10 md:w-12 md:h-12 mt-12 mr-1 rounded-[50%]' src={channel.snippet.thumbnails.high.url} alt="" />
                 )}
-                <div className='ml-2'>
-                    <ul className='text-lg mt-2'>
-                        <li className='font-bold text-lg mt-2'>{info.snippet.title}</li>
+                <div className=''>
+                    <ul className='text-md mt-2 p-4 m-2'>
+                        <li className='font-bold text-md mt-2 mr-1 pr-1'>{info.snippet.title}</li>
                         <li className='font-semibold mt-2'>{info.snippet.channelTitle}</li>
                         <li>{ViewConverter(info.statistics.viewCount)} views &bull; {moment(info.snippet.publishedAt).fromNow()}</li>
                     </ul>
