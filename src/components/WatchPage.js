@@ -93,12 +93,12 @@ const WatchPage = () => {
             
       </div>
       <div className='flex m-2 md:m-5 ml-1 md:ml-6 mt-1 md:mt-4'>
-  <img className="rounded-full w-12  md:w-14 border-2 border-white mr-2 md:mr-4" src={channel?.snippet?.thumbnails?.high?.url} alt="Channel Thumbnail" />
+  <img className="rounded-full w-12 h-12  md:w-14 border-2 border-white mr-2 md:mr-4" src={channel?.snippet?.thumbnails?.high?.url} alt="Channel Thumbnail" />
   <div className=''>
     <div className='flex items-center '>
       <div className='flex-1'>
-        <p className='text-lg font-semibold'>{channel?.snippet?.title}</p>
-        <span className='text-lg'>{ViewConverter(channel?.statistics?.subscriberCount)}</span>
+        <p className='text-md md:text-lg font-semibold'>{channel?.snippet?.title}</p>
+        <span className='text-md md:text-lg'>{ViewConverter(channel?.statistics?.subscriberCount)}</span>
       </div>
       <button className='bg-red-600 px-2 py-1 text-white rounded-md font-semibold ml-20'>Subscribe</button>
     </div>
