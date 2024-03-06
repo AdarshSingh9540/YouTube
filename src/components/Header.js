@@ -54,7 +54,7 @@ const Header = () => {
     alt="hamburger"
     />
 <img 
-className=' h-10 md:m-4 md:m-0 ml-6 md:ml-6  mt-5 md:mt-0 md:mx-2 ' src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt=""
+className=' h-10 md:m-4  ml-6  mr-16 md:ml-6  mt-5 md:mt-0 md:mx-2 ' src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt=""
  />
    </div>
       <div className='col-span-10 md:px-10  md:mx-25'>
