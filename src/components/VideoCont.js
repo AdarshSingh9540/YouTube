@@ -34,7 +34,7 @@ if(videos===undefined) return   <div className="">error</div>
 
     return (
         videos.length === 0 ? <ShimmerVideoCardContainer /> : (
-            <div className='p-2 flex flex-wrap my-6 md:mx-6 md:overflow-hidden'>
+            <div className='p-0 md:p-2 flex flex-col  md:flex-row md:flex-wrap my-4 md:my-6 md:mx-6 overflow-x-hidden md:overflow-hidden'>
                 {videos.map(video => (
                     <div key={video.id}>
                         <Link to={"/watch?v=" + video.id}><VideosCards info={video} channelId={video.snippet.channelId} /></Link>

@@ -25,12 +25,12 @@ const VideosCards = ({ info, channelId }) => {
     return !info ? (
         <ShimmerVideoCardContainer />
     ) : (
-        <Link to={`/watch?v=${info.id}`} className='video-card-link over md:overflow-hidden'>
-            <div className='m-1 mr-1 items-center md:m-2 md:ml-6 h-full p-1 md:p-2 w-[100%] md:w-[400px] inline-block md:overflow-hidden hover:scale-110 transition-delay-175 '>
+        <Link to={`/watch?v=${info.id}`} className='video-card-link  overflow-hidden md:overflow-hidden'>
+            <div className=' my-2 md:items-center md:m-2 md:ml-6 h-full  md:p-2 w-[390px] md:w-[400px] inline-block overflow-hidden md:overflow-hidden hover:scale-105 md:hover:scale-110 transition-delay-175 '>
             <img className='rounded-lg mt-1' src={info.snippet.thumbnails.high.url} alt="" />
             <div className='flex flex-row'>
                 {channel && (
-                    <img className='w-12 h-12 mt-6 mr-1 rounded-[50%]' src={channel.snippet.thumbnails.high.url} alt="" />
+                    <img className='w-12 md:w-12 h-12 mt-6 mr-1 rounded-[50%]' src={channel.snippet.thumbnails.high.url} alt="" />
                 )}
                 <div className='ml-2'>
                     <ul className='text-lg mt-2'>

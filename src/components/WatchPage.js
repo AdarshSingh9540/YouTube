@@ -78,11 +78,10 @@ const WatchPage = () => {
 
   return (
     <div className='flex flex-col w-full overflow-hidden'>
-      <div className='px-5 flex w-full rounded-lg'>
-        <div className='w-[1100px] h-auto '>
+      <div className='px-0 md:px-5 flex w-full rounded-lg'>
+        <div className='w-full md:w-[1100px] md:h-auto '>
           <iframe
-            width="1085"
-            height="550"
+            className='w-full h-[240px] md:w-1050 md:h-[550px]'
             src={"https://www.youtube.com/embed/" + searchParams.get("v")}
             title="YouTube video player"
             frameBorder="0"
@@ -90,11 +89,11 @@ const WatchPage = () => {
             allowFullScreen
           ></iframe>
           <div className='w-[1100px] h-auto'>
-            {videoInfo && <h2 className='font-bold text-2xl mt-6 mb-2'>{videoInfo?.title}</h2>}
+            {videoInfo && <h2 className='font-bold  text-2xl mt-2 md:mt-6 mb-2'>{videoInfo?.title}</h2>}
             
       </div>
-      <div className='flex m-5  ml-6 mt-4'>
-  <img className="rounded-full w-14 border-2 border-white mr-4" src={channel?.snippet?.thumbnails?.high?.url} alt="Channel Thumbnail" />
+      <div className='flex m-2 md:m-5 ml-1 md:ml-6 mt-1 md:mt-4'>
+  <img className="rounded-full w-12  md:w-14 border-2 border-white mr-2 md:mr-4" src={channel?.snippet?.thumbnails?.high?.url} alt="Channel Thumbnail" />
   <div className=''>
     <div className='flex items-center '>
       <div className='flex-1'>

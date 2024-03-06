@@ -45,28 +45,28 @@ const Header = () => {
         dispatch(toggleMenu());
     };
   return (
-    <div className='grid grid-flow-col p-1 md:p-3 m-1 md:m-2 shadow-lg sticky top-0 z-10 h-14 bg-white' >
+    <div className='grid grid-flow-col p-1 md:p-3  md:m-2 shadow-lg sticky top-0 z-10 h-16 md:h-14 bg-white ' >
    <div className='flex col-span-1'>
    <img 
    onClick={()=>toggleMenuhandler()}
-   className='h-9 mt-6 md:mt-0 ml-1 md:ml-0cursor-pointer'
+   className='h-10 md:h-9 mt-6 md:mt-0 ml-1 md:ml-0cursor-pointer'
     src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png?f=webp"  
     alt="hamburger"
     />
 <img 
-className='h-10 m-4 md:m-0 ml-2 md:ml-6  mt-5 md:mt-0 md:mx-2 ' src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt=""
+className=' h-10 md:m-4 md:m-0 ml-6 md:ml-6  mt-5 md:mt-0 md:mx-2 ' src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6-1200-80.jpg" alt=""
  />
    </div>
-      <div className='col-span-10 px-10 mx-25'>
-       <div >
+      <div className='col-span-10 md:px-10  md:mx-25'>
+       <div className='ml-4' >
         <input 
         value={searchQuery}
         onChange={(e)=> setSearchQuery(e.target.value)}
         onFocus={()=> setShowSugg(true)}
         onBlur={()=> setShowSugg(false)}
         type="text"
-         className='w-[50%] md:w-1/2 border border-gray-400 rounded-l-lg px-1 md:px-5 py-1 md:py-1 mt-6 md:mt-0 ml-12 md:ml-0'  placeholder='Search...'/>
-        <button className='border border-gray-400 rounded-r-lg  md:px-5 py-1 md:py-1'>Search</button>
+         className='w-[50%] md:w-1/2 border border-gray-400 rounded-l-lg px-2 md:px-5 py-1 md:py-1 mt-6 md:mt-0 ml-8 md:ml-0'  placeholder='Search...'/>
+        <button className='border border-gray-400 rounded-r-lg  px-1 md:px-5 py-1 md:py-1'>Search</button>
         </div>
         {/* <div className='fixed bg-white py-2 px-5 w-[37rem] shadow-lg rounded-lg'>
           <ul className=''>
