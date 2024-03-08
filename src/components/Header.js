@@ -49,7 +49,7 @@ const Header = () => {
    <div className='flex col-span-1'>
    <img 
    onClick={()=>toggleMenuhandler()}
-   className='h-10 md:h-9 mt-6 md:mt-0 ml-1 md:ml-0cursor-pointer'
+   className='h-9 md:h-9 mt-6 md:mt-0 ml-1 md:ml-0cursor-pointer'
     src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png?f=webp"  
     alt="hamburger"
     />
