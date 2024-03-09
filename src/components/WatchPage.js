@@ -15,7 +15,7 @@ const WatchPage = () => {
     const searchParams = new URLSearchParams(location.search);
     const videoId = searchParams.get('v');
     const channel = useSelector(state => state.video.channel.find(channel => channel.id === videoInfo?.snippet?.channelId));
-console.log(videoInfo)
+console.log(channel)
     useEffect(() => {
         dispatch(closeMenu());
         if (videoId) {
@@ -125,9 +125,9 @@ console.log(videoInfo)
         
       </div>
       <div className='m-0 w-24 md:w-0'> <Comments  /></div>
-      <div className=''>
+      <div className='mt-2'>
           {/* <LiveChat /> */}
-          <RecomVideo categoryId={videoId}/>
+          <RecomVideo  categoryId={videoId}/>
         </div>
     
       
