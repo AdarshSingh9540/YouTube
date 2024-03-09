@@ -100,7 +100,8 @@ console.log(videoInfo)
         <p className='text-md md:text-lg font-semibold'>{channel?.snippet?.title}</p>
         <span className='text-md md:text-lg'>{ViewConverter(channel?.statistics?.subscriberCount)}</span>
       </div>
-      <button className='bg-black px-2 py-1 text-white rounded-md font-semibold ml-28 mdLml-20'>Subscribe</button>
+     
+      <button className='bg-black px-2 py-1 text-white rounded-md font-semibold ml-20 mdLml-20'>Subscribe</button>
     </div>
   </div>
 </div>
