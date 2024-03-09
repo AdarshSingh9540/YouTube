@@ -20,11 +20,11 @@ const VideoCont = () => {
        try{
         const data = await fetch(API_URL);
         const json = await data.json();
-        // console.log(json)
+        console.log(json)
         setVideos(json.items);
         dispatch(addvideo(json.items))
        }catch(error){
-        console.log(error)
+        // console.log(error)
        }
     }
 

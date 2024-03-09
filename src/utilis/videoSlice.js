@@ -12,9 +12,12 @@ const videoSlice =  createSlice({
         },
         addchannel: (state, action) => {
             state.channel.push(...action.payload);
+        },
+        addrecomvideo:(state,action)=>{
+            state.recomvideo.push(...action.payload);
         }
     }
 })
 
-export const {addvideo , addchannel} = videoSlice.actions
+export const {addvideo , addchannel ,addrecomvideo} = videoSlice.actions
 export default videoSlice.reducer
