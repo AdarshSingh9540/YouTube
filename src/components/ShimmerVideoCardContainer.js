@@ -10,5 +10,4 @@ const ShimmerVideoCardContainer = () => {
     </div>
   )
 }
-
 export default ShimmerVideoCardContainer

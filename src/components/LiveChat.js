@@ -7,9 +7,7 @@ import { generateRandomName, makeRandomMess } from '../utilis/helper';
 
 const LiveChat = () => {
   const [liveMess , setLiveMess] = useState("")
-
     const dispatch = useDispatch();
-
     const chatMessages = useSelector((store)=> store.chat.message);
 
     useEffect(()=>{
@@ -32,7 +30,6 @@ const LiveChat = () => {
             <ChatsMess key={i} name={c.name} message={c.message}/>
         ))
       }
-      
     </div>
     <form className='w-[80%] p-1 m-3 border border-black ' onSubmit={(e) =>{
       e.preventDefault();
@@ -46,7 +43,6 @@ const LiveChat = () => {
         setLiveMess(e.target.value)
       }} />
       <button className='px-2 p-1 mx-2 bg-red-500 font-bold rounded-md'>Send</button>
-
     </form>
     </>
     

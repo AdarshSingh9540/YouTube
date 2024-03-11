@@ -10,22 +10,15 @@ const persistConfig = {
     key: 'root',
     storage,
 };
-
-// Combine reducers correctly
 const rootReducer = combineReducers({
     app: appSlice,
     search: searchSlice,
     chat: chatSlice,
     video: videoSlice,
 });
-
-// Apply persist configuration to the root reducer
 const persistedReducer = persistReducer(persistConfig, rootReducer);
-
 const store = configureStore({
     reducer: persistedReducer,
 });
-
 let persistor = persistStore(store);
-
 export { store, persistor };

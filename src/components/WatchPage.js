@@ -74,8 +74,6 @@ console.log(channel)
   
       return sections;
   };
-  
-
   return (
     <div className='flex flex-col md:flex-row w-full md:overflow-hidden'>
       <div className='px-0 md:px-5 flex flex-row md:flex-col w-full rounded-lg'>

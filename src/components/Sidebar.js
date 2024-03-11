@@ -65,8 +65,6 @@ const Sidebar = () => {
         </li>
         
     </ul>
-
-
     <h1 className='font-bold pt-5 pl-2  text-lg'>Subscription</h1>
     <ul className='my-2 pl-2 w-46 text-lg'> 
     <li className="flex mt-4 cursor-pointer">
