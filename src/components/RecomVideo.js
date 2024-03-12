@@ -37,12 +37,10 @@ console.log(channelDet)
                     <img src={snippet?.thumbnails?.high?.url} alt="" />
                         </div>
                        <div className='flex flex-row'>
-                        <img className='rounded-[50%] w-12 h-8 md:w-12 md:h-12 mt-4 ' src={channelDet} alt="" />
+                        <img className='rounded-full w-12 h-8 md:w-12 md:h-12 mt-4 ' src={channelDet} alt="" />
                         <div className='ml-4 mt-2'>
                             <p className=''>{snippet && snippet.title}</p>
-                            <p className='font-semibold'>{snippet && snippet.channelTitle}</p>
-                            {console.log(snippet)}
-                            
+                            <p className='font-semibold'>{snippet && snippet.channelTitle}</p> 
                         </div>
                        </div>
                     </div>
