@@ -42,7 +42,7 @@ console.log(channelDet)
                             <p className=''>{snippet && snippet.title}</p>
                             <p className='font-semibold'>{snippet && snippet.channelTitle}</p>
                             {console.log(snippet)}
-                            {/* Add other snippet properties as needed */}
+                            
                         </div>
                        </div>
                     </div>
