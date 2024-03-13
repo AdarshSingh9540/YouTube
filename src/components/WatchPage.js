@@ -15,7 +15,7 @@ const WatchPage = () => {
     const searchParams = new URLSearchParams(location.search);
     const videoId = searchParams.get('v');
     const channel = useSelector(state => state.video.channel.find(channel => channel.id === videoInfo?.snippet?.channelId));
-console.log(channel)
+// console.log(channel)
     useEffect(() => {
         dispatch(closeMenu());
         if (videoId) {
