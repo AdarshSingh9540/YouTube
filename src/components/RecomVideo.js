@@ -10,15 +10,16 @@ const RecomVideo = ({categoryId}) => {
    const [videoInfo, setVideoInfo] = useState(null);
     const [showDescription, setShowDescription] = useState(false);
     const channelDet = useSelector(state => state.video.channel[0].snippet.thumbnails.high.url);
-console.log(channelDet)
+// console.log(channelDet)
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const data = await fetch("https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&videoCategoryId="+categoryId+"&key=" + API_KEY);
                 const json = await data.json();
-                const ids = json.items.map(item => item.snippet.categoryId);
-                setCategoryIds(ids);
-                console.log(ids)
+                console.log(json);
+                console.log("adarsg")
+                // setCategoryIds(ids);
+               
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
